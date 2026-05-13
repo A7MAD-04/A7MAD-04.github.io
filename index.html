@@ -4,60 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ahmad Firas Alaina — Data Scientist & ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-logo">Ahmad Alaina</div>
-    <ul class="nav-links">
+    <div class="nav-logo">Ahmad <span>Alaina</span></div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#certificates">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="nav-right">
+      <a href="Ahmad_Alaina_CV_Final.pdf" download class="btn btn-nav-cv">Download CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
+    <div class="hero-bg-glow"></div>
     <div class="hero-content">
-      <div class="hero-tag">👋 Available for opportunities</div>
-      <h1>Ahmad Firas<br/><span>Alaina</span></h1>
-      <p class="hero-title">Data Scientist & ML Engineer</p>
-      <p class="hero-sub">Building end-to-end AI products — not just notebooks, but full-stack platforms with real impact.</p>
+      <div class="hero-tag">
+        <span class="tag-pulse"></span>
+        Available for opportunities
+      </div>
+      <h1>Ahmad Firas<br/><span class="accent-text">Alaina</span></h1>
+      <p class="hero-title">Data Scientist &amp; ML Engineer</p>
+      <p class="hero-sub">
+        Building end-to-end AI systems — from ETL pipelines and trained ML models
+        to REST APIs and containerized deployments.
+        Published researcher at <strong>ACM ICICS '26</strong>.
+      </p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-        <a href="https://github.com/A7MAD-04" target="_blank" class="btn btn-ghost">GitHub ↗</a>
+        <a href="#research" class="btn btn-outline">Research Paper ↗</a>
+        <a href="Ahmad_Alaina_CV_Final.pdf" download class="btn btn-ghost">Download CV ↓</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><div class="stat-num" data-target="3">0</div><div class="stat-label">Years Studying</div></div>
-        <div class="stat"><div class="stat-num" data-target="5">0</div><div class="stat-label">Projects Built</div></div>
-        <div class="stat"><div class="stat-num" data-target="2">0</div><div class="stat-label">NVIDIA Certificates</div></div>
-        <div class="stat"><div class="stat-num" data-target="84">0</div><div class="stat-label">Best AUC Score %</div></div>
+        <div class="stat">
+          <div class="stat-num">3.99</div>
+          <div class="stat-label">GPA / 4.0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="1">0</div>
+          <div class="stat-label">ACM Publication</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="4" data-suffix="+">0</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="code-block">
-        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">ahmad_alaina.py</span>
+        </div>
         <pre><code><span class="c-purple">class</span> <span class="c-blue">AhmadAlaina</span>:
-  role = <span class="c-green">"Data Scientist"</span>
+  role = <span class="c-green">"Data Scientist & ML Engineer"</span>
   location = <span class="c-green">"Amman, Jordan"</span>
-  education = <span class="c-green">"3rd Year DS"</span>
+  degree = <span class="c-green">"B.Sc. Data Science"</span>
+  gpa = <span class="c-amber">3.99</span>  <span class="c-comment"># / 4.0</span>
+  year = <span class="c-green">"Final Year — Oct 2026"</span>
 
-  skills = [
-    <span class="c-green">"Machine Learning"</span>,
-    <span class="c-green">"Deep Learning"</span>,
-    <span class="c-green">"NLP"</span>,
-    <span class="c-green">"FastAPI"</span>,
-    <span class="c-green">"React"</span>,
-    <span class="c-green">"Docker"</span>,
+  expertise = [
+    <span class="c-green">"ML Pipelines & NLP"</span>,
+    <span class="c-green">"Data Engineering"</span>,
+    <span class="c-green">"FastAPI & Docker"</span>,
+    <span class="c-green">"BERT & Transformers"</span>,
   ]
 
+  published = <span class="c-amber">True</span>  <span class="c-comment"># ACM ICICS '26</span>
+
   <span class="c-purple">def</span> <span class="c-blue">build</span>(self, idea):
-    <span class="c-purple">return</span> <span class="c-green">"Full product 🚀"</span></code></pre>
+    <span class="c-purple">return</span> <span class="c-green">"Full-stack AI product 🚀"</span></code></pre>
       </div>
     </div>
   </section>
@@ -65,16 +102,30 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="section-header">
+      <div class="section-label">01 / About</div>
       <h2 class="section-title">About Me</h2>
-      <p class="section-sub">Who I am and what I do</p>
+      <p class="section-sub">Data Scientist with a product mindset</p>
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a 3rd year Data Science student at university in Amman, Jordan. I'm passionate about turning data into real products that companies can actually use.</p>
+        <p>I'm a <strong>final-year Data Science student</strong> at Jordan University of Science and Technology, graduating in October 2026 with a GPA of <strong>3.99/4.0</strong>. I have a peer-reviewed publication at <strong>ACM ICICS '26</strong> and NVIDIA-certified expertise in deep learning and NLP.</p>
         <br/>
-        <p>Most data science students stop at notebooks. I go further — I build full platforms with ML models, REST APIs, React dashboards, and Docker deployment.</p>
+        <p>I specialize in building <strong>end-to-end AI systems</strong> — from raw data ingestion and ETL pipelines to trained ML models, REST APIs, and containerized deployments. My work lives in production-ready code, not just notebooks.</p>
         <br/>
-        <p>I'm currently building my portfolio with projects in customer analytics, NLP, and deep learning — each one a complete, deployable product.</p>
+        <p>I'm actively seeking a full-time role in <strong>Data Science, ML Engineering, or Analytics</strong> where I can contribute from day one — backed by strong fundamentals, hands-on engineering, and published research.</p>
+        <div class="cv-download-row">
+          <span class="cv-label">Download Resume:</span>
+          <div class="cv-btns">
+            <a href="Ahmad_Alaina_CV_Final.pdf" download class="btn-cv-dl pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+              PDF
+            </a>
+            <a href="Ahmad_Alaina_CV_Final.docx" download class="btn-cv-dl docx">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+              DOCX
+            </a>
+          </div>
+        </div>
         <div class="about-links">
           <a href="https://www.linkedin.com/in/ahmad-alaina-75ba7a319/" target="_blank" class="social-btn linkedin">LinkedIn ↗</a>
           <a href="mailto:ahmadalaina84@gmail.com" class="social-btn email">Email ↗</a>
@@ -82,10 +133,93 @@
         </div>
       </div>
       <div class="about-cards">
-        <div class="info-card"><div class="info-icon">🎓</div><div><div class="info-title">Education</div><div class="info-val">Data Science, 3rd Year</div></div></div>
-        <div class="info-card"><div class="info-icon">📍</div><div><div class="info-title">Location</div><div class="info-val">Amman, Jordan</div></div></div>
-        <div class="info-card"><div class="info-icon">🔭</div><div><div class="info-title">Focus</div><div class="info-val">ML, NLP, MLOps</div></div></div>
-        <div class="info-card"><div class="info-icon">📧</div><div><div class="info-title">Email</div><div class="info-val">ahmadalaina84@gmail.com</div></div></div>
+        <div class="info-card">
+          <div class="info-icon">🎓</div>
+          <div class="info-body">
+            <div class="info-title">Education</div>
+            <div class="info-val">B.Sc. Data Science — Final Year</div>
+            <div class="info-sub">Jordan University of Science &amp; Technology · Expected Oct 2026</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div class="info-body">
+            <div class="info-title">Location</div>
+            <div class="info-val">Amman, Jordan</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📄</div>
+          <div class="info-body">
+            <div class="info-title">Research</div>
+            <div class="info-val">Published — ACM ICICS '26</div>
+            <div class="info-sub">International Conference on Intelligent Computing and Information Systems</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎯</div>
+          <div class="info-body">
+            <div class="info-title">Focus Areas</div>
+            <div class="info-val">ML Engineering · NLP · Data Engineering</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="section-header">
+      <div class="section-label">02 / Research</div>
+      <h2 class="section-title">Research &amp; Publications</h2>
+      <p class="section-sub">Peer-reviewed work at international conferences</p>
+    </div>
+    <div class="research-card">
+      <div class="research-top">
+        <div class="research-badges">
+          <span class="acm-badge">ACM</span>
+          <span class="conf-badge">ICICS '26</span>
+          <span class="conf-location">Irbid, Jordan · May 2026</span>
+        </div>
+        <span class="research-pages">7-page proceedings</span>
+      </div>
+      <h3 class="research-title">
+        An End-to-End Data Engineering Pipeline for AI-Assisted Project Domain Classification Using Multi-Source Data
+      </h3>
+      <p class="research-authors">
+        Alaa Alhowaide · <strong>Ahmad Elaina</strong> · Ayoub Malkawi · Osama Almallah · Yaqoub Alothman
+      </p>
+      <p class="research-abstract">
+        Designed and evaluated a full ETL pipeline ingesting 486 labeled records across 38 technical domains from heterogeneous sources (JSON, CSV, unstructured text). Benchmarked Logistic Regression, Random Forest, and BERT — detecting and resolving label leakage that boosted BERT macro F1 by <strong>10×</strong> (0.05 → 0.52). Proposed a human-in-the-loop deployment strategy estimated to reduce manual classification labor by <strong>75–80%</strong> in enterprise environments.
+      </p>
+      <div class="research-metrics">
+        <div class="r-metric">
+          <span class="r-val">486</span>
+          <span class="r-key">Records Curated</span>
+        </div>
+        <div class="r-metric">
+          <span class="r-val">38</span>
+          <span class="r-key">Technical Domains</span>
+        </div>
+        <div class="r-metric">
+          <span class="r-val">67.37%</span>
+          <span class="r-key">Best Test Accuracy</span>
+        </div>
+        <div class="r-metric">
+          <span class="r-val">75–80%</span>
+          <span class="r-key">Labor Reduction</span>
+        </div>
+      </div>
+      <div class="research-footer">
+        <div class="research-tags">
+          <span>ETL Pipeline</span>
+          <span>BERT</span>
+          <span>Random Forest</span>
+          <span>Synthetic Data</span>
+          <span>NLP</span>
+          <span>Feature Engineering</span>
+          <span>Label Leakage</span>
+        </div>
       </div>
     </div>
   </section>
@@ -93,22 +227,23 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-header">
+      <div class="section-label">03 / Projects</div>
       <h2 class="section-title">Projects</h2>
-      <p class="section-sub">Full-stack ML products — not just notebooks</p>
+      <p class="section-sub">Full-stack AI products — built to deploy, not just to demo</p>
     </div>
     <div class="projects-grid">
 
       <div class="project-card" onclick="openProject('churn')">
         <div class="project-header">
           <span class="project-tag">Machine Learning</span>
-          <span class="project-status live">Live</span>
+          <span class="project-status live">● Live</span>
         </div>
         <h3>Customer Churn Intelligence Platform</h3>
-        <p>End-to-end ML platform predicting telecom customer churn. Full EDA, feature engineering, and Gradient Boosting model with 0.84 AUC score.</p>
+        <p>End-to-end ML platform predicting customer churn using Logistic Regression, Random Forest, and Gradient Boosting with SHAP-based feature importance. Served via FastAPI REST endpoints with an interactive analytics dashboard showing churn probability scores and revenue-at-risk metrics.</p>
         <div class="project-metrics">
           <span>🎯 AUC: 0.84</span>
           <span>👥 7,043 customers</span>
-          <span>📊 3 models</span>
+          <span>📊 3 ML models</span>
         </div>
         <div class="project-stack">
           <span>Python</span><span>Scikit-learn</span><span>FastAPI</span><span>React</span><span>Docker</span>
@@ -118,49 +253,71 @@
         </div>
       </div>
 
+      <div class="project-card" onclick="openProject('skilllink')">
+        <div class="project-header">
+          <span class="project-tag">Full-Stack AI</span>
+          <span class="project-status grad">Graduation Project</span>
+        </div>
+        <h3>SkillLink — AI-Powered Freelance Marketplace</h3>
+        <p>Full-stack freelance marketplace with an ML-powered recommendation engine matching freelancers to job postings via skill-profile similarity. Built real-time analytics pipelines tracking user activity, engagement metrics, and platform reporting for business stakeholders.</p>
+        <div class="project-metrics">
+          <span>🤖 ML Recommender</span>
+          <span>📊 Real-time Analytics</span>
+          <span>🔗 REST APIs</span>
+        </div>
+        <div class="project-stack">
+          <span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>Docker</span><span>Pandas</span>
+        </div>
+        <div class="project-links">
+          <span class="proj-private">🔒 Private Repository</span>
+        </div>
+      </div>
+
     </div>
-    <p class="more-projects">More projects coming soon...</p>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
     <div class="section-header">
+      <div class="section-label">04 / Skills</div>
       <h2 class="section-title">Skills</h2>
-      <p class="section-sub">Technologies I work with</p>
+      <p class="section-sub">Technologies and tools I work with professionally</p>
     </div>
     <div class="skills-grid">
       <div class="skill-category">
-        <h4>Machine Learning</h4>
+        <h4>Machine Learning &amp; AI</h4>
         <div class="skill-items">
           <div class="skill-item"><span>Scikit-learn</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
           <div class="skill-item"><span>PyTorch</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+          <div class="skill-item"><span>Gradient Boosting / XGBoost</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+          <div class="skill-item"><span>SHAP / Model Explainability</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Data Engineering</h4>
+        <div class="skill-items">
           <div class="skill-item"><span>Pandas / NumPy</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
-          <div class="skill-item"><span>Matplotlib / Seaborn</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+          <div class="skill-item"><span>ETL Pipeline Design</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+          <div class="skill-item"><span>Feature Engineering</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+          <div class="skill-item"><span>SQL</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
         </div>
       </div>
       <div class="skill-category">
-        <h4>Backend & Deployment</h4>
+        <h4>Deep Learning &amp; NLP</h4>
         <div class="skill-items">
-          <div class="skill-item"><span>FastAPI</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-          <div class="skill-item"><span>Docker</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
-          <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
-          <div class="skill-item"><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h4>Frontend</h4>
-        <div class="skill-items">
-          <div class="skill-item"><span>React</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-          <div class="skill-item"><span>TypeScript</span><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
-          <div class="skill-item"><span>HTML / CSS</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h4>Deep Learning & NLP</h4>
-        <div class="skill-items">
+          <div class="skill-item"><span>BERT / Transformers</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
           <div class="skill-item"><span>LSTM / RNN</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
-          <div class="skill-item"><span>Transformers</span><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
-          <div class="skill-item"><span>Transfer Learning</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+          <div class="skill-item"><span>Transfer Learning</span><div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div></div>
+          <div class="skill-item"><span>NLP Pipelines</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Backend &amp; Deployment</h4>
+        <div class="skill-items">
+          <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+          <div class="skill-item"><span>FastAPI</span><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+          <div class="skill-item"><span>Docker</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+          <div class="skill-item"><span>React / TypeScript</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
         </div>
       </div>
     </div>
@@ -169,20 +326,27 @@
   <!-- CERTIFICATES -->
   <section id="certificates">
     <div class="section-header">
-      <h2 class="section-title">Certificates</h2>
-      <p class="section-sub">Professional certifications</p>
+      <div class="section-label">05 / Certifications</div>
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-sub">Professional credentials from leading institutions</p>
     </div>
     <div class="certs-grid">
       <div class="cert-card" onclick="openCert('https://learn.nvidia.com/certificates?id=dDNUHBzJSEuOBNjXKZeVmA')">
-        <div class="cert-logo">NVIDIA</div>
+        <div class="cert-logo nvidia">NVIDIA</div>
         <h4>Building Transformer-Based NLP Applications</h4>
-        <p>Advanced NLP with transformer architectures for real-world applications</p>
+        <p>Advanced NLP with transformer architectures for real-world production applications</p>
         <span class="cert-link">View Certificate ↗</span>
       </div>
       <div class="cert-card" onclick="openCert('https://learn.nvidia.com/certificates?id=Ik_BzQQDQ42NQE48hspmjQ')">
-        <div class="cert-logo">NVIDIA</div>
+        <div class="cert-logo nvidia">NVIDIA</div>
         <h4>Data Parallelism: Train Deep Learning on Multiple GPUs</h4>
         <p>Distributed training techniques for large-scale deep learning models</p>
+        <span class="cert-link">View Certificate ↗</span>
+      </div>
+      <div class="cert-card" onclick="openCert('https://www.coursera.org/account/accomplishments/verify/NAZLIC4Z0WP3')">
+        <div class="cert-logo microsoft">Microsoft</div>
+        <h4>Harnessing the Power of Data with Power BI</h4>
+        <p>Business intelligence, data modeling, and interactive dashboards with Power BI</p>
         <span class="cert-link">View Certificate ↗</span>
       </div>
     </div>
@@ -191,8 +355,9 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-sub">Let's work together</p>
+      <div class="section-label">06 / Contact</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">Open to full-time roles in Data Science, ML Engineering &amp; Analytics</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card">
@@ -210,7 +375,7 @@
       <div class="contact-card">
         <div class="contact-icon">💻</div>
         <h4>GitHub</h4>
-        <p>Check out my code and projects</p>
+        <p>Explore my code and projects</p>
         <a href="https://github.com/A7MAD-04" target="_blank" class="btn btn-primary">View GitHub</a>
       </div>
     </div>
@@ -218,7 +383,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Built by Ahmad Firas Alaina · <a href="https://github.com/A7MAD-04" target="_blank">GitHub</a></p>
+    <div class="footer-inner">
+      <span>Ahmad Firas Alaina · Data Scientist &amp; ML Engineer</span>
+      <span class="footer-links">
+        <a href="https://github.com/A7MAD-04" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/ahmad-alaina-75ba7a319/" target="_blank">LinkedIn</a>
+        <a href="mailto:ahmadalaina84@gmail.com">Email</a>
+      </span>
+    </div>
   </footer>
 
   <!-- PROJECT MODAL -->
