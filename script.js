@@ -91,6 +91,24 @@ const projects = {
     github: 'https://github.com/A7MAD-04/customer-churn-platform',
     isPrivate: false
   },
+  nlp: {
+    title: 'NLP Sentiment Analysis Platform',
+    tag: 'NLP · Machine Learning',
+    status: 'Live',
+    desc: 'End-to-end NLP platform that classifies airline tweets into positive, neutral, or negative sentiment in real-time. Built a full pipeline from raw text cleaning and TF-IDF vectorization to a trained Linear SVM model, served via FastAPI and visualized in an interactive React dashboard with probability distribution charts.',
+    metrics: [
+      'Accuracy: 77.8% on 3-class sentiment classification',
+      '14,640 labeled airline tweets analyzed',
+      'Full NLP pipeline: cleaning, stopword removal, TF-IDF vectorization',
+      'Linear SVM model trained and benchmarked against Logistic Regression',
+      'REST API with FastAPI + interactive React dashboard',
+      'Probability distribution charts with Recharts',
+      'Fully containerized with Docker Compose'
+    ],
+    stack: ['Python', 'Scikit-learn', 'NLTK', 'TF-IDF', 'FastAPI', 'React', 'TypeScript', 'Recharts', 'Docker'],
+    github: 'https://github.com/A7MAD-04/nlp-sentiment-platform',
+    isPrivate: false
+  },
   skilllink: {
     title: 'SkillLink — AI-Powered Freelance Marketplace',
     tag: 'Full-Stack AI · Graduation Project',
