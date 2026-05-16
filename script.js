@@ -1,3 +1,25 @@
+// Sync data-target values with actual card counts in the DOM
+function updateCounterTargets() {
+  const counts = {
+    'research': document.querySelectorAll('.research-card').length,
+    'project':  document.querySelectorAll('.project-card').length,
+    'certification': document.querySelectorAll('.cert-card').length,
+  };
+  document.querySelectorAll('.stat').forEach(stat => {
+    const label = stat.querySelector('.stat-label');
+    const num   = stat.querySelector('.stat-num[data-target]');
+    if (!label || !num) return;
+    const text = label.textContent.toLowerCase();
+    for (const [key, val] of Object.entries(counts)) {
+      if (text.includes(key)) {
+        num.setAttribute('data-target', val);
+        num.textContent = '0';
+        break;
+      }
+    }
+  });
+}
+
 // Counter animation — skips elements without data-target
 function animateCounters() {
   document.querySelectorAll('.stat-num[data-target]').forEach(el => {
@@ -31,7 +53,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      if (entry.target.id === 'hero') animateCounters();
+      if (entry.target.id === 'hero') { updateCounterTargets(); animateCounters(); }
       if (entry.target.id === 'skills') animateSkills();
     }
   });
@@ -68,7 +90,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // Trigger counters on initial load
 window.addEventListener('load', () => {
-  setTimeout(animateCounters, 600);
+  setTimeout(() => { updateCounterTargets(); animateCounters(); }, 600);
 });
 
 // ─── Project Data ─────────────────────────────────────────────
