@@ -39,27 +39,17 @@ function animateCounters() {
   });
 }
 
-// Skill bar animation
-function animateSkills() {
-  document.querySelectorAll('.skill-fill').forEach(bar => {
-    const width = bar.style.width;
-    bar.style.width = '0';
-    setTimeout(() => { bar.style.width = width; }, 100);
-  });
-}
-
 // Intersection Observer — fade-in + trigger animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       if (entry.target.id === 'hero') { updateCounterTargets(); animateCounters(); }
-      if (entry.target.id === 'skills') animateSkills();
     }
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('section, .project-card, .cert-card, .info-card, .research-card').forEach(el => {
+document.querySelectorAll('section, .project-card, .cert-card, .info-card, .research-card, .exp-item').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
@@ -135,16 +125,17 @@ const projects = {
     title: 'SkillLink — AI-Powered Freelance Marketplace',
     tag: 'Full-Stack AI · Graduation Project',
     status: 'Graduation Project',
-    desc: 'Full-stack freelance marketplace with an ML-powered recommendation engine matching freelancers to job postings via skill-profile similarity. Led the data science and backend components — built real-time analytics pipelines tracking user activity, engagement metrics, and platform reporting for business stakeholders.',
+    desc: 'Full-stack freelance marketplace with an ML-powered recommendation engine matching freelancers to job postings via skill-profile similarity. Backend/ML lead: built the skill-matching recommender plus 5 ML systems covering pricing, screening, and skill-gap analysis, along with real-time analytics pipelines tracking user activity, engagement metrics, and platform reporting for business stakeholders.',
     metrics: [
       'ML-powered recommender engine using skill-profile similarity',
+      '5 ML systems: pricing, screening, skill-gap analysis',
       'Real-time analytics pipeline for user engagement',
-      'RESTful API with FastAPI',
+      'RESTful API with FastAPI + PostgreSQL',
       'React + TypeScript frontend',
       'Platform reporting dashboard for stakeholders',
       'Containerized with Docker'
     ],
-    stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Docker', 'Pandas', 'REST APIs'],
+    stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'Pandas', 'REST APIs'],
     github: null,
     isPrivate: true
   }
